@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Adlandırma Yöntemleri</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>CSS Adlandırma Yöntemleri</h1>
+      <p>
+        Web projelerinde stil dosyalarını organize etmek için popüler adlandırma
+        yöntemlerini öğrenin.
+      </p>
+    </header>
+
+    <main>
+      <section id="bem">
+        <h2>1. BEM (Block, Element, Modifier)</h2>
+        <p>BEM, CSS sınıflarını blok, eleman ve modifikasyon olarak böler.</p>
+        <pre><code>.header {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+}
+.header__logo {
+  width: 100px;
+  height: 50px;
+  background-color: white;
+}
+.header__logo--small {
+  width: 50px;
+  height: 25px;
+}</code></pre>
+        <h3>Karmaşık Senaryo:</h3>
+        <pre><code>&lt;div class="product-card"&gt;
+  &lt;h2 class="product-card__title"&gt;Ürün Adı&lt;/h2&gt;
+  &lt;div class="product-card__image product-card__image--featured"&gt;&lt;/div&gt;
+  &lt;p class="product-card__description"&gt;Ürün açıklaması...&lt;/p&gt;
+  &lt;button class="product-card__button product-card__button--buy"&gt;Satın Al&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+      </section>
+
+      <section id="smacss">
+        <h2>2. SMACSS (Scalable and Modular Architecture for CSS)</h2>
+        <p>
+          SMACSS, CSS kurallarını kategoriye ayırarak projeyi düzenli hale
+          getirir.
+        </p>
+        <pre><code>/* Taban */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Düzen */
+.layout-header {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+}</code></pre>
+        <h3>Karmaşık Senaryo:</h3>
+        <pre><code>&lt;body class="theme-light"&gt;
+  &lt;header class="layout-header"&gt;
+    &lt;h1 class="layout-header__title"&gt;Blog Başlığı&lt;/h1&gt;
+  &lt;/header&gt;
+  &lt;main class="layout-main"&gt;
+    &lt;article class="post"&gt;
+      &lt;h2 class="post__title"&gt;Yazı Başlığı&lt;/h2&gt;
+      &lt;p class="post__content"&gt;Yazı içeriği...&lt;/p&gt;
+      &lt;button class="button is-active"&gt;Devamını Oku&lt;/button&gt;
+    &lt;/article&gt;
+  &lt;/main&gt;
+&lt;/body&gt;</code></pre>
+      </section>
+
+      <section id="oocss">
+        <h2>3. OOCSS (Object-Oriented CSS)</h2>
+        <p>
+          OOCSS, taşınabilir ve tekrar kullanılabilir nesneler oluşturmayı
+          hedefler.
+        </p>
+        <pre><code>.box {
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.box--rounded {
+  border-radius: 10px;
+}</code></pre>
+        <h3>Karmaşık Senaryo:</h3>
+        <pre><code>&lt;div class="gallery"&gt;
+  &lt;div class="box box--rounded"&gt;
+    &lt;img src="image1.jpg" alt=""&gt;
+  &lt;/div&gt;
+  &lt;div class="box"&gt;
+    &lt;img src="image2.jpg" alt=""&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </section>
+
+      <section id="atomic">
+        <h2>4. Atomik CSS</h2>
+        <p>
+          Atomik CSS, stil özelliklerini küçük ve birleşimiş formlar olarak
+          uygular.
+        </p>
+        <pre><code>.mt-2 {
+  margin-top: 20px;
+}
+
+.p-3 {
+  padding: 30px;
+}
+
+.bg-blue {
+  background-color: blue;
+}
+
+.text-white {
+  color: white;
+}</code></pre>
+        <h3>Karmaşık Senaryo:</h3>
+        <pre><code>&lt;div class="p-3 bg-blue text-white mt-2"&gt;
+  &lt;h2 class="text-lg"&gt;Kullanıcı Adı&lt;/h2&gt;
+  &lt;p&gt;Bu bir profil açıklamasıdır.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+      </section>
+
+      <section>
+        <h1>Özet:</h1>
+        <p>
+          Bu yöntemler, CSS sınıflarını organize etmek ve stil çatışmalarını
+          azaltmak için kullanılır.
+        </p>
+        <ul>
+          <li><p>BEM: Modüler yaklaşım.</p></li>
+          <li><p>SMACSS: Kategorilere ayrım.</p></li>
+          <li><p>OOCSS: Taşınabilir nesneler.</p></li>
+          <li><p>Atomik CSS: Stilözgülü şablonlar.</p></li>
+        </ul>
+        <h2 style="font-weight: bold;">
+          Bu yöntemlerden birini seçerek projelerinizi daha düzenli ve
+          sürdürülebilir hale getirebilirsiniz.
+        </h2>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 CSS Adlandırma Yöntemleri</p>
+    </footer>
+  </body>
+</html>
